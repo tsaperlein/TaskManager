@@ -1,0 +1,183 @@
+:root {
+  color: #172822;
+  background: #f3f6f4;
+  font-family: system-ui, sans-serif;
+  line-height: 1.55;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  width: min(100% - 2rem, 44rem);
+  margin: 0 auto;
+  padding: clamp(1.5rem, 6vw, 3.5rem) 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 1.25rem;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1.15;
+}
+
+h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+.panel {
+  padding: clamp(1rem, 4vw, 1.5rem);
+  border: 1px solid #ccd9d1;
+  border-radius: 0.75rem;
+  background: #fff;
+}
+
+form,
+.field,
+.task-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.field {
+  gap: 0.35rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+label span,
+.description {
+  color: #4b6056;
+  font-weight: 400;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+textarea {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #768a7d;
+  border-radius: 0.375rem;
+  background: #fff;
+  color: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+:focus-visible {
+  outline: 2px solid #0d6b50;
+  outline-offset: 3px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+button {
+  min-height: 2.75rem;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid #768a7d;
+  border-radius: 0.375rem;
+  background: #fff;
+  color: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #eaf1ed;
+}
+
+button.primary {
+  border-color: #16553f;
+  background: #16553f;
+  color: #fff;
+}
+
+button.primary:hover:not(:disabled) {
+  background: #113f30;
+}
+
+button.danger,
+.error {
+  color: #a12e32;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+
+.feedback,
+.task-section {
+  margin-top: 1rem;
+}
+
+.feedback:empty {
+  margin-top: 0;
+}
+
+.panel > .error {
+  margin-bottom: 0.75rem;
+}
+
+.task-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.task {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+}
+
+.task-details {
+  flex: 1 1 12rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.description {
+  margin-top: 0.25rem;
+  white-space: pre-wrap;
+}
+
+.completed {
+  margin-top: 0.35rem;
+  color: #16553f;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
